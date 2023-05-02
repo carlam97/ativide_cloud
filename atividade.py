@@ -22,9 +22,16 @@ while pergunta_global != '0':
         '''
     )
 
+    palavrass = []
+    quantidade = []
+    numeros = []
+    numeross = []
+    lista_menor = []
+    lista_maior = []
 
-    #if (menu == '2' or menu == '3' or menu == '4') and not texto_limpo:
-    #   input("Não é possivel escolher essa opção agora, tente outra: ")
+
+    if (menu == '2' or menu == '3' or menu == '4') and not texto_limpo:
+       input("Não é possivel escolher essa opção agora, tente outra: ")
 
     # Limpar o conteudo
     if menu == '1':
@@ -52,8 +59,8 @@ while pergunta_global != '0':
 
     # Permita ao usuário saber qual(is) palavra(s) que e quantas aparições de cada uma
     elif menu == '3':
-        palavrass = []
-        quantidade = []
+        #palavrass = []
+        #quantidade = []
 
         for palavra in palavras_ordenadas:
             palavrass.append(palavra)
@@ -76,10 +83,10 @@ while pergunta_global != '0':
 
     # Exibir a com mais aparição e a com menos aparição
     elif menu == '4':
-        numeros = []
-        numeross = []
-        lista_menor = []
-        lista_maior = []
+        #numeros = []
+        #numeross = []
+        #lista_menor = []
+        #lista_maior = []
 
         palavra_menos_frequente = min(quantidade)
         palavra_mais_frequente = max(quantidade)
@@ -100,3 +107,9 @@ while pergunta_global != '0':
 
         print(lista_menor)
         print(lista_maior)
+
+    elif menu == '0':
+        pergunta_global = '0'
+    
+    else:
+        input("Esse valor não está dentro do menu, tente novamente com um dos valores abaixo: ")
